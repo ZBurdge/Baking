@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baking-Cupcakes</title>
+    <style>
+      body {
+        background: linear-gradient(
+          to right,
+          rgb(151, 150, 240),
+          rgb(251, 199, 212)
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        transition: all 200ms ease-in-out;
+        border: 2px solid lavender;
+      }
+      .theme {
+        background: black;
+        color: white;
+        font-size: 10px;
+        padding: 10px 15px;
+        border-radius: 4px;
+      }
+      .theme:hover {
+        background: white;
+        color: black;
+        cursor: pointer;
+      }
+      .container {
+        background: white;
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 14px;
+      }
+      p {
+        line-height: 1.5;
+        text-align: left;
+      }
+      a:hover {
+        cursor: pointer;
+        color: black;
+        font-weight: bold;
+      }
+      .class {
+        background: white;
+        border-radius: 4px;
+        box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
+      }
+      .class:hover {
+        background: lavender;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+      }
+      .intro-cupcake-picture {
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+      .intro-cupcake-picture:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        margin: 15px auto;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .dark {
+        background: radial-gradient(
+          circle at 24.1% 68.8%,
+          rgb(50, 50, 50) 0%,
+          rgb(0, 0, 0) 99.4%
+        );
+      }
+      .dark .container {
+        background: #393e46;
+        color: white;
+      }
+      .dark footer {
+        color: white;
+      }
+      .dark a {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme">Change Theme</button>
+
+    <div class="container">
+      <h1>🧁Baking</h1>
+      <h2>For the love of Cupcakes!</h2>
+
+      <a href="https://simple.wikipedia.org/wiki/Cupcake" target="_blank" ;>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/904/original/Double-Strawberry-Cupcakes.jpg?1677873438"
+          alt="cc1"
+          class="intro-cupcake-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/922/original/Honey-Bee-Cupcake.jpg?1677881792"
+          alt="cc2"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/921/original/Chocolate-Cherry-Cupcakes.jpg?1677881749"
+          alt="cc3"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/923/original/moscato-cupcakes.jpg?1677881896"
+          alt="cc4"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/924/original/Chocolate-Cupcakes.png?1677882114"
+          alt="cc5"
+        />
+      </div>
+      <p>
+        A cupcake (also British English: fairy cake; Hiberno-English: bun) is a
+        small cake designed to serve one person, which may be baked in a small
+        thin paper or aluminum cup. As with larger cakes, frosting and other
+        cake decorations such as fruit and candy may be applied.
+        <br />
+        <a href="https://simple.wikipedia.org/wiki/Cupcake" target="_blank" ;>
+          Learn more on Wikipedia
+        </a>
+      </p>
+      <button class="class">Join Cupcake 🧁 Classes</button>
+    </div>
+    <footer>Coded & baked with 🖤 by Zgene' Burdge</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        body.classList.toggle("dark");
+      }
+      function joinClasses() {
+        let name = prompt("What is your fist Name?");
+        let email = prompt("What is your email?");
+        if (name && email) {
+          alert(
+            "Thank you " +
+              name +
+              "! You will be receiving a class schedule soon. Happy Baking 🧁"
+          );
+        } else {
+          alert("Please provide name and email so we can bake together soon!");
+        }
+      }
+      let themeChange = document.querySelector(".theme");
+      themeChange.addEventListener("click", changeTheme);
+
+      let cupcakeClass = document.querySelector(".class");
+      cupcakeClass.addEventListener("click", joinClasses);
+    </script>
+  </body>
+</html>
